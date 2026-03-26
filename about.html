@@ -236,7 +236,7 @@ li:hover {
 <header>
   <a href="#top"> AIWeb generation </a>
    <nav> 
-    <li><a href="homepage.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="creation.html">Creation</a></li>
    </nav>
@@ -257,10 +257,14 @@ li:hover {
   <p> WebAI is an AI generation tool used to create websites with the most simple of prompts. It is more of a concept
   rather than a practical website. It is merely a showcase of what AI is capable of.</p>
  </div>
+  <div class="section2">
+    <h2> How does it work? </h2>
+    <p>I dunno I havent made it work yet sdghskljgdhsadklj ghsadkljghgghalg hdghghsadgh ghgggggghns adbcuia
+    sadkgjhsadkljghsdklj ghsadkljghsakj dghkhwueihgkjaeh	</p>
+  </div>
 </div>
 
-<footer>
-</footer>
+
 
 <div class="section1">
  <div class="section2">
@@ -279,8 +283,18 @@ li:hover {
  </div>
 </div>
 
-<footer></footer>
 
+
+
+ 
+
+<div class="section1">
+ <div class="section2">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+	<li><a href="creation.html">Creation</a></li>
+ </div>
+</div>
 </div>
 
 <script>
@@ -334,7 +348,7 @@ li:hover {
         const el = entry.target;
         const text = el.textContent;
         const isFast = el.id === 'section2p';  // fast for #section2p
-        const speed = isFast ? 2 : 20;         // ms per char vs ms
+        const speed = isFast ? 2 : 2;         // ms per char vs ms
         el.textContent = '';
         el.style.opacity = '1';
         text.split('').forEach((char, i) => {
