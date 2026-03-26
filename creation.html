@@ -298,36 +298,6 @@ li:hover {
   background: black;
   color: white;
 }
-
-@media (max-width: 1024px) {
-  #headerh1, h1 { font-size: 10vw; }
-  #headerp, p { font-size: 3.5vw; }
-  h2 { font-size: 6vw; }
-  .prompt-input { font-size: 2vw; padding: 1vw 2vw; width: 50%; }
-  .generate-btn, .download-btn { font-size: 2vw; padding: 1vw 2vw; }
-  .preview-container iframe { height: 50vw; }
-  header a { font-size: 4vw; }
-}
-
-@media (max-width: 768px) {
-  #headerh1, h1 { font-size: 12vw; }
-  #headerp, p { font-size: 4vw; }
-  h2 { font-size: 7vw; }
-  .prompt-input { font-size: 2.5vw; padding: 1vw 2vw; width: 60%; }
-  .generate-btn, .download-btn { font-size: 2.5vw; padding: 1vw 2vw; }
-  .preview-container iframe { height: 60vw; }
-  header a { font-size: 5vw; }
-}
-
-@media (max-width: 480px) {
-  #headerh1, h1 { font-size: 14vw; }
-  #headerp, p { font-size: 5vw; }
-  h2 { font-size: 9vw; }
-  .prompt-input { font-size: 3vw; padding: 1vw 2vw; width: 80%; }
-  .generate-btn, .download-btn { font-size: 3vw; padding: 1vw 2vw; }
-  .preview-container iframe { height: 80vw; }
-  header a { font-size: 6vw; }
-}
 </style>
 <body>
 <div class="page-wrapper" id="top">
@@ -335,7 +305,7 @@ li:hover {
 <header>
   <a href="#top"> AIWeb generation </a>
    <nav> 
-    <li><a href="index.html">Home</a></li>
+    <li><a href="homepage.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="creation.html">Creation</a></li>
    </nav>
@@ -366,14 +336,6 @@ li:hover {
     </div>
   </div>
 
- </div>
-</div>
-
-<div class="section1">
- <div class="section2">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-	<li><a href="creation.html">Creation</a></li>
  </div>
 </div>
 
@@ -472,28 +434,14 @@ li:hover {
     downloadBtn.style.display = 'none';
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch('https://backend-py067tdub-nixonwebdevelopment-beeps-projects.vercel.app/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 4000,
-          messages: [{
-            role: 'user',
-            content: `Create a complete, beautiful, single-file HTML website for: "${prompt}". 
-            Requirements:
-            - Everything in one HTML file (inline CSS and JS)
-            - Visually stunning with animations
-            - Professional and modern design
-            - Multiple sections with relevant content
-            - Mobile responsive
-            - Return ONLY the raw HTML code, nothing else, no markdown, no explanation.`
-          }]
-        })
+        body: JSON.stringify({ prompt })
       });
 
       const data = await response.json();
-      generatedHTML = data.content[0].text;
+      generatedHTML = data.html;
 
       // Show in iframe
       previewFrame.srcdoc = generatedHTML;
