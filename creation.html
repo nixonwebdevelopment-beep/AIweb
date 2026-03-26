@@ -441,7 +441,8 @@ li:hover {
       });
 
       const data = await response.json();
-      generatedHTML = data.html;
+console.log('Response from backend:', JSON.stringify(data));
+generatedHTML = data.html;
 
       // Show in iframe
       previewFrame.srcdoc = generatedHTML;
@@ -467,11 +468,12 @@ li:hover {
 
     btn.disabled = false;
   }
-
+  
   // Allow Enter key to generate
   document.getElementById('promptInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') generateWebsite();
   });
+    
 </script>
 
 </body>
