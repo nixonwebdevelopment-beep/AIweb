@@ -58,7 +58,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: subtleZoom 32s ease-in-out infinite alternate;
+  animation: subtleZoom 16s ease-in-out infinite alternate;
 }
 
 @keyframes subtleZoom {
@@ -106,7 +106,6 @@ body {
   gap: 2vw;
   width: 100%;
   align-items: flex-start; 
-  flex-wrap: wrap;
 }
 
 .image-card p {
@@ -210,163 +209,172 @@ li:hover {
 }
 
 @media (max-width: 1024px) {
-  #headerh1, h1 { font-size: 10vw; margin-top: 1vw;}
+  #headerh1, h1 { font-size: 10vw; }
+  #headerp, p { font-size: 3.5vw; }
   h2 { font-size: 6vw; }
-  #headerp, p, #section2p { font-size: 3.5vw; }
-  .image-card { width: 28%; }
-  .image-card img { height: 25vw; }
-  a { font-size: 4vw; }
+  header a { font-size: 4vw; }
 }
 
 @media (max-width: 768px) {
   #headerh1, h1 { font-size: 12vw; }
+  #headerp, p { font-size: 4vw; }
   h2 { font-size: 7vw; }
-  #headerp, p, #section2p { font-size: 4vw; }
-  .image-card { width: 40%; }
-  .image-card img { height: 30vw; }
-   a { font-size: 5vw; }
+  header a { font-size: 5vw; }
 }
 
 @media (max-width: 480px) {
   #headerh1, h1 { font-size: 14vw; }
+  #headerp, p { font-size: 5vw; }
   h2 { font-size: 9vw; }
-  #headerp, p, #section2p { font-size: 5vw; }
-  .image-card { width: 80%; }
-  .image-card img { height: 50vw; }
-   a { font-size: 6vw; }
+  header a { font-size: 6vw; }
 }
+
 </style>
 <body>
 <div class="page-wrapper" id="top">
+
 <header>
   <a href="#top"> AIWeb generation </a>
    <nav> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-	<li><a href="creation.html">Creation</a></li>
+    <li><a href="creation.html">Creation</a></li>
    </nav>
 </header>
 
-<div class="section1" style="position: relative;">
-  <div class="section1text">
-    <h1 id="headerh1">AI WEB</h1>
-    <a href="creation.html"><p id="headerp">Website Generation</p></a>
-  </div>
-  <a href="#next" class="scroll-arrow">↓</a>
-</div>
-
 <div class="section1">
-  <div class="section2">
-    <h2 id="next">AI or not?</h2>
-    <p id="section2p">The text will appear after you click on the image</p>
-    <div class="image-row">
-      <div class="image-card">
-        <a href="https://nixonwebdevelopment-beep.github.io/Web1/" target="_blank">
-          <img src="web1.png">
-        </a>
-        <p>Claude</p>
-      </div>
-      <div class="image-card">
-        <a href="https://nixonwebdevelopment-beep.github.io/Web2/" target="_blank">
-          <img src="web2.png">
-        </a>
-        <p>ChatGPT</p>
-      </div>
-      <div class="image-card">
-        <a href="https://nixonwebdevelopment-beep.github.io/Web3/" target="_blank">
-          <img src="web3.png">
-        </a>
-        <p>Gemini</p>
-      </div>
-      <div class="image-card">
-	    <a href="https://www.unrevealedmedia.com/" target="_blank">
-        <img src="web4.png">
-		</a>
-        <p>Human</p>
-      </div>
-      <div class="image-card">
-	    <a href="https://nixonwebdevelopment-beep.github.io/Web5/" target="_blank">
-        <img src="web5.png">
-		</a>
-        <p>Human</p>
-      </div>
-    </div>
-  </div>
+ <div class="section1text">
+  <h1 id="#headerh1"> About WebAI </h1>
+  <br>
+  <p id="#headerp"> What is it? </p>
+ </div>
 </div>
 
 <div class="section1">
  <div class="section2">
-  <h2> How were your guesses? </h2>
+  <h2> What is WebAI? </h2>
   <br>
+  <p> WebAI is an AI generation tool used to create websites with the most simple of prompts through groq. It is more of a concept
+  rather than a practical website. It is merely a showcase of what AI is capable of. Although the code may not be
+  complex in your prompt, with better AI it works much better.</p>
+ </div>
+  <div class="section2">
+    <h2> How does it work? </h2>
+    <p>The website uses a API key to externally use groq code from a prompt (it was going to be claude but im too broke
+    to afford a claude API key) it then generates the prompt into a iframe within the website showing what has been generated.
+    you can save the website if you want to but it is pretty mediocre.	</p>
+  </div>
+</div>
+
+
+
+<div class="section1">
+ <div class="section2">
+  <h2> What is AI coding capable of? </h2>
+  <p id="section2p" style="font-size: 1vw;"> So what is AI coding capable of? According to a blog post from Max Struever (engineer and consultant for over ten years), Matthew Krop (CIO of BCG X) and Julie Bedard 
+  (Researcher at BCG X) AI is capable of many things. Both Microsoft and Google's new code is around 30% AI. AI is very good at streamlining repetitive and low priority tasks. This means that 
+  tedious tasks can be handled by AI in the background, saving developers time on more important tasks. AI won't give huge improvements overnight though, as you still need to train and develop 
+  the AI's memory and tasks. Hitachi (Multi industry company involved with software development) reports that their workers work 83% faster with AI helping them. These facts give a lot of insight 
+  into the research, but the source itself does have its strengths and weaknesses. It is quite good with the facts, giving numbers and data, but its not all good. All 3 of the writers from this 
+  article work within the company that published the article. This means that this entire article could be working for them in some way. The stats in this article aren't just random numbers, they 
+  are significant improvements. Huge companies like Microsoft use a lot of AI in their new code (⅓). This means that ⅓ of the work force put onto the developers has been lifted, making them have to 
+  do a lot less work, and allows them to focus on much more important things that AI can't. Hitachi devs working 83% faster mean they are working almost twice the speed with AI. This means that production 
+  is almost doubled, massively improving profit margins and allowing developers to work through their work much faster than they ever could. These facts show us, or at least give us a glimpse into what ai 
+  is capable of. It shows us that production speed can be massively increased, and work stress also massively decreases.
+ </p>
+ </div>
+</div>
+
+
+
+
+ 
+
+<div class="section1">
+ <div class="section2">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
 	<li><a href="creation.html">Creation</a></li>
  </div>
 </div>
-
 </div>
 
 <script>
-const textElements = document.querySelectorAll('h1, h2, h3, p, a:not(.scroll-arrow)');
-textElements.forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-  el.style.transitionDelay = `${(i % 5) * 0.1}s`;
-});
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    } else {
-      entry.target.style.opacity = '0';
-      entry.target.style.transform = 'translateY(30px)';
-    }
+  // ── Fade + slide up on scroll ────────────────────────────────
+  const textElements = document.querySelectorAll('h1, h2, h3, p, a:not(.scroll-arrow)');
+
+  textElements.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    el.style.transitionDelay = `${(i % 5) * 0.1}s`;
   });
-}, { threshold: 0.2 });
-textElements.forEach(el => observer.observe(el));
 
-document.querySelectorAll('h1, h2').forEach(el => {
-  let start = null;
-  const offset = Math.random() * 1000;
-  function float(timestamp) {
-    if (!start) start = timestamp;
-    const elapsed = (timestamp - start + offset) / 1000;
-    const y = Math.sin(elapsed * 0.8) * 6;
-    el.style.transform = `translateY(${y}px)`;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      } else {
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateY(30px)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  textElements.forEach(el => observer.observe(el));
+
+  // ── Subtle floating effect on headings ──────────────────────
+  document.querySelectorAll('h1, h2').forEach(el => {
+    let start = null;
+    const offset = Math.random() * 1000;
+
+    function float(timestamp) {
+      if (!start) start = timestamp;
+      const elapsed = (timestamp - start + offset) / 1000;
+      const y = Math.sin(elapsed * 0.8) * 6;
+      el.style.transform = `translateY(${y}px)`;
+      requestAnimationFrame(float);
+    }
     requestAnimationFrame(float);
-  }
-  requestAnimationFrame(float);
-});
+  });
 
-const paras = document.querySelectorAll('#section2p, #headerp');
-const typed = new Set();
-const typeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !typed.has(entry.target)) {
-      typed.add(entry.target);
-      const el = entry.target;
-      const text = el.textContent;
-      el.textContent = '';
-      el.style.opacity = '1';
-      text.split('').forEach((char, i) => {
-        setTimeout(() => { el.textContent += char; }, i * 30);
+  // ── Typewriter effect on ALL p elements ─────────────────────
+  const allParas = document.querySelectorAll('p');
+  const typed = new Set();
+
+  const typeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !typed.has(entry.target)) {
+        typed.add(entry.target);
+        const el = entry.target;
+        const text = el.textContent;
+        const isFast = el.id === 'section2p';  // fast for #section2p
+        const speed = isFast ? 2 : 2;         // ms per char vs ms
+        el.textContent = '';
+        el.style.opacity = '1';
+        text.split('').forEach((char, i) => {
+          setTimeout(() => {
+            el.textContent += char;
+          }, i * speed);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  allParas.forEach(el => typeObserver.observe(el));
+
+  // ── Reveal text on image click ───────────────────────────────
+  document.querySelectorAll('.image-card').forEach(card => {
+    const img = card.querySelector('img');
+    const text = card.querySelector('p');
+
+    if (img && text) {
+      img.addEventListener('click', () => {
+        text.classList.toggle('revealed');
       });
     }
   });
-}, { threshold: 0.5 });
-paras.forEach(el => typeObserver.observe(el));
-
-document.querySelectorAll('.image-card').forEach(card => {
-  const img = card.querySelector('img');
-  const text = card.querySelector('p');
-  if (img && text) {
-    img.addEventListener('click', () => {
-      text.classList.toggle('revealed');
-    });
-  }
-});
 </script>
 
 </body>
